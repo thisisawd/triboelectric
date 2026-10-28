@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#163f37" />
+  <meta name="description" content="An interactive, read-aloud study guide for all 13 questions on static electricity, charge, and conductors." />
+  <title>Charge Lab | Your static electricity study guide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#lesson">Skip to lesson</a>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-icon" aria-hidden="true">+</span> Charge Lab</a>
+    <span class="header-note">SMALL STEPS. BIG SPARKS.</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">YOUR C.2 STUDY COMPANION</p>
+        <h1 id="page-title">Let's make<br />static <em>click.</em></h1>
+        <p class="intro-copy">Understand the why, not just the answer. Work through your test, explore the charges, and put your knowledge into practice.</p>
+        <div class="feature-list"><span>13 guided lessons</span><span>Read-aloud</span><span>Voice answers</span></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Opposite charges attract: a positive charge and a negative charge pull toward each other.">
+        <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+        <span class="hero-charge positive">+</span><span class="hero-connection">attract</span><span class="hero-charge negative">&minus;</span>
+        <span class="art-caption">A little curiosity. A lot of attraction.</span>
+      </div>
+    </section>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="progress-heading"><h2>Your learning path</h2><span id="progress-count">0 / 13</span></div>
+        <progress id="progress" max="13" value="0" aria-label="Lessons completed">0 of 13</progress>
+        <nav id="lesson-nav" aria-label="Test questions"></nav>
+        <p class="save-note" id="save-note">Progress stays in this browser.</p>
+        <details class="reference">
+          <summary>Keep the charge rules handy</summary>
+          <p>Electrons move; protons stay in atomic nuclei. Gain electrons: negative. Lose electrons: positive. Like charges repel; opposites attract. A charged object can also attract a neutral one.</p>
+        </details>
+      </aside>
+      <article class="lesson-card" id="lesson" aria-labelledby="lesson-title">
+        <div class="lesson-topline"><p class="eyebrow" id="lesson-meta"></p><span class="level-tag" id="lesson-level"></span></div>
+        <h2 id="lesson-title" tabindex="-1"></h2>
+        <div class="audio-bar">
+          <button type="button" class="button audio-button" id="read-button">Read to me</button>
+          <button type="button" class="button subtle" id="pause-button" disabled>Pause</button>
+          <button type="button" class="button subtle" id="stop-button" disabled>Stop</button>
+          <label class="speed-label" for="speech-rate">Speed <select id="speech-rate"><option value="0.8">0.8x</option><option value="1" selected>1x</option><option value="1.2">1.2x</option></select></label>
+        </div>
+        <p id="audio-status" class="helper" role="status"></p>
+        <section class="explanation" aria-labelledby="explanation-heading"><h3 id="explanation-heading"><span class="step-number">1</span> Learn it step by step</h3><div id="explanation-content"></div></section>
+        <section class="explore" aria-labelledby="explore-heading"><h3 id="explore-heading"><span class="step-number">2</span> See the science</h3><div id="explore-content"></div></section>
+        <section class="original-question" aria-labelledby="original-heading"><h3 id="original-heading">Connect it to your test</h3><div id="original-content"></div></section>
+        <section class="practice" aria-labelledby="practice-heading">
+          <div class="section-heading"><h3 id="practice-heading"><span class="step-number">3</span> Your turn</h3><span class="format-tag" id="format-tag"></span></div>
+          <p class="helper">Same idea, a fresh question. Practice numbers match your test.</p>
+          <form id="practice-form" novalidate>
+            <div id="practice-content"></div>
+            <p class="validation" id="answer-error" role="alert"></p>
+            <div class="practice-actions"><button class="button primary" type="submit" id="check-button">Check my answer</button><button class="button subtle" type="button" id="another-button">Try another format</button></div>
+          </form>
+          <div id="feedback" class="feedback" role="status"></div>
+          <div id="self-check" hidden></div>
+        </section>
+        <div class="lesson-footer"><button type="button" class="button subtle" id="previous-button">Previous</button><span id="lesson-position"></span><button type="button" class="button primary" id="next-button">Next lesson <span aria-hidden="true">&rarr;</span></button></div>
+      </article>
+    </div>
+    <section class="source-section" aria-labelledby="sources-heading">
+      <h2 id="sources-heading">Built around your test</h2>
+      <p>Questions 1–13 follow the three supplied pages. Explanations use the science, not the handwritten answers or grading marks. Practice is for learning, not a new test score.</p>
+      <p class="page-map">Page 1: Questions 1–3 · Page 2: Questions 4–8 · Page 3: Questions 9–13</p>
+      <p>The original photographs stay private; only the transcribed learning content is published.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>Charge Lab</span><span>Understand it. Explain it. You've got this.</span></footer>
+  <noscript><p class="noscript">Enable JavaScript for the lessons, browser read-aloud, and voice answers.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
